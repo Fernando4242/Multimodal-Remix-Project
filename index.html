@@ -5,456 +5,327 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Resort</title>
-    <link rel="icon" type="image/ico" href="images/logo.jpg" />
+    <title>NewsFake - Home </title>
+    <link rel="icon" type="image/ico" href="images/Logo.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css?family=Concert+One|Playfair+Display|Neuton|Space+Mono|Work+Sans&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="fontawesome-free-5.11.2-web/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <h1> <a href="#home">Destin , Florida</a></h1>
-            <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#accommodations">Hotels</a></li>
-                <li><a href="#attractions">Attractions</a></li>
-                <li><a href="#review">Reviews</a></li>
-                <li><a href="#dining">Dining</a></li>
-                <li><a href="#contactUs">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="headerContent" id="home">
-            <h1>Greatest Destination</h1>
+    <div class="container-fluid">
+        <div class="row headerAdHolder">
+            <div class="imageHolder">
+                <img id="headerAd" src="">
+            </div>
         </div>
-    </header>
-    <!-- Container -->
-    <div class="container">
-        <!-- Overview -->
-        <section id="overview">
-            <!-- Section Title -->
-            <div class="sectionTitle">
-                <h1>Overview</h1>
-                <p>Want To learn more about Destin,Florda. Read the description below!</p>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                NewsFake
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="technology.html">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="local.html">Local</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="basketball.html">Basketball</a>
+                            <a class="dropdown-item" href="hockey.html">Hockey</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="entertainment.html">Entertainment</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <div id="one">
+                        <h5 class="time"></h5>
+                    </div>
+                    <div id="two">
+                        <h5><span class="display"></span> &#8457;</h5>
+                    </div>
+                    <div id="three">
+                        <h5 class="hour"></h5>
+                    </div>
+                </span>
             </div>
-            <!-- Content -->
-            <div class="content">
-                <div class="left">
-                    <img src="images/overview.jpg">
+        </nav>
+        <!-- Darkmode Button -->
+        <div class="text-right fixed-bottom">
+            <button id="dark-on-off" type="button" class="btn btn-dark">Dark Mode</button>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="row jumbo">
+                <div class="col">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="row" id="weather-stuff">
+                            <div class="col-12">
+                                <h4 id="location">Dallas, Texas 75229</h4>
+                                <p class="time"></p>
+                                <p class="hour"></p>
+                                <p id="description">Partly Cloudy</p>
+                            </div>
+                            <div class="col-6 temperature">
+                                <div>
+                                    <img id="icon" src="" alt="">
+                                </div>
+                                <div>
+                                    <h1><span class="display" style="font-size: 40px;"></span> &#8457;</h1>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <p id="cloudy"></p>
+                                <p id="humidity">humidity</p>
+                                <p id="wind">Wind</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="right">
-                    <h2>Destin, Florida</h2>
-                    <p>
-                        Destin is a city located in Okaloosa County, Florida. It is a principal city of the
-                        Crestview–Fort Walton Beach–Destin, Florida, metropolitan area. Located on Florida's Emerald
-                        Coast, Destin is known for its white beaches and emerald green waters. Originating as a small
-                        fishing village, it is now a popular tourist destination. According to the Florida Department of
-                        Environmental Protection, over 80 percent of the Emerald Coast's 4.5 million visitors each year
-                        visit Destin. The city styles itself "The World's Luckiest Fishing Village", and claims to have
-                        the largest fishing vessel fleet in the state of Florida.
-                    </p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col">
+                                <h2 class="section-title">Featured</h2>
+                            </div>
+                        </div>
+                        <div class="card bg-dark text-white">
+                            <img class="card-img" src="images/technology/amazon.jpg" alt="Card image">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title"><a href="technology.html">Amazon wants to ship you anything in
+                                        30 minutes. It's going to
+                                        need a
+                                        lots
+                                        of robots</a></h5>
+                                <p class="card-text">
+                                    Amazon is making small robots to command in their road to world power of eCommerce
+                                    and delivery business.
+                                </p>
+                                <p class="card-text last-modified"></p>
+                            </div>
+                        </div>
+                        <div class="card bg-dark text-white">
+                            <img class="card-img" src="images/technology/kanye.jpg" alt="Card image">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title"><a href="entertainment.html">Kanye says he may change his name to
+                                        Christian Genius Billionaire
+                                        Kanye
+                                        West. Then again, he says a lot of things</a></h5>
+                                <p class="card-text">
+                                    Kanye West, husband of one the Kardashian,
+                                    has once again made a bold statement about changing his name.
+                                </p>
+                                <p class="card-text last-modified"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col">
+                                <h2 class="section-title">Sports</h2>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 100%;">
+                            <img class="card-img-top"
+                                src="images/sports/James_Wiseman_of_Memphis_Can_Return_From_Suspension_in_January.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="basketball.html"> James Wiseman of Memphis Can Return
+                                        From Suspension in January
+                                    </a></h5>
+                                <p class="card-text">
+                                    After a brutal year of bashing from left and right. James Wiseman can return to play
+                                    just like
+                                    he wanted to.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 100%;">
+                            <img class="card-img-top"
+                                src="images/sports/Getting_Hockey_Referees_Ready_for_the Big_Leagues.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="hockey.html"> Getting Hockey Referees Ready for the Big
+                                        Leagues</a></h5>
+                                <p class="card-text">
+                                    This punny Referees are not ready for Hockey season where
+                                    tooths are broken each match.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title">More on NewsFake</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="card-deck">
+                            <div class="card" style="width:100%;">
+                                <img class="card-img-top" src="images/sports/Amy_Schumer.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="entertainment.html"> Amy Schumer gave out her phone
+                                            number. We tried getting in
+                                            touch
+                                        </a></h5>
+                                </div>
+                            </div>
+                            <div class="card" style="width:100%;">
+                                <img class="card-img-top" src="images/local/local_animals.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 id="weather" class="card-title article-one-link"><a href="local.html">More than
+                                            100
+                                            animals rescued from double-wide trailer,
+                                            Collin County
+                                            officials say</a>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="card" style="width:100%;">
+                                <img class="card-img-top" src="images/local/rail.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="local.html">Texas High-Speed Train Is ‘Shovel
+                                            Ready'</a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Accommodations -->
-        <section id="accommodations">
-            <!-- Section Title -->
-            <div class="sectionTitle">
-                <h1>Accommodations</h1>
-                <p>There are many places to stay in Destin. You can even get hotels directly infront of the ocean.</p>
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-12">
+                    <form class="form-inline my-2 ">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
-            <!-- Hotels Cards -->
-            <div class="figures">
-                <!-- Figure One -->
-                <figure>
-                    <figcaption>
-                        <a href="images/hotels/sandestinBeachResort.jpg" target="_blank"><img src="images/hotels/sandestinBeachResort.jpg" alt="Sandestin Golf and Beach Resort"></a>
-                        <h2>Sandestin Golf and Beach Resort</h2>
-                        <a
-                            href="https://www.google.com/maps/place/9300+Emerald+Coast+Pkwy,+Miramar+Beach,+FL+32550/@30.3796435,-86.3284596,17z/data=!3m1!4b1!4m5!3m4!1s0x889159516ae5de7b:0x43b388cb9e982db3!8m2!3d30.3796389!4d-86.3262709">
-                            9300 Emerald Coast Parkway, Destin, FL 32550
-                        </a>
-                        <p>7.9 (2,212 reviews)</p>
-                        <p>
-                            Offering a private beach area and water sports facilities. Guests can enjoy a meal at
-                            the
-                            restaurant or a drink at the bar.
-                        </p>
-                        <hr>
-                        <div class="hidden">
-                            <div class="gallery">
-                                <img src="images/hotels/sandestinBeachResort_footer/imgOne.jpg" alt="">
-                                <img src="images/hotels/sandestinBeachResort_footer/imgTwo.jpg" alt="">
-                                <img src="images/hotels/sandestinBeachResort_footer/imgThree.jpg" alt="">
-                            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Technology</h3>
                         </div>
-                        <div class="figuresFooter">
-                            <button><a
-                                    href="https://www.booking.com/hotel/us/sandestin-golf-and-beach-resort-destin.html?aid=346685;label=msn-A44mI9_EJsxpRct5OvLsMg-79989508864498%3Atikwd-17273517559%3Aloc-190%3Aneo%3Amte%3Adec%3Aqsdestin%20florida;sid=37b49151aefe38e27ebb4a37907b28c8;dest_id=20022075;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=7;hpos=7;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1570931154;srpvid=90bd0c69d8ab01cc;type=total;ucfs=1&#hotelTmpl">
-                                    Reserve</a>
-                            </button>
-                        </div>
-                    </figcaption>
-                </figure>
-                <!-- Figure Two -->
-                <figure>
-                    <a href="images/hotels/hendersonBeachResort.jpg" target="_blank"><img src="images/hotels/hendersonBeachResort.jpg" alt=""></a>
-                    <figcaption>
-                        <h2>Henderson Beach Resort</h2>
-                        <a href="#">
-                            200 Henderson Resort Way, Destin, 32541, USA
-                        </a>
-                        <p>9.2 (285 reviews)</p>
-                        <p>
-                            Henderson Beach Resort is located adjacent to Henderson Beach State Park and offers private
-                            beach access.
-                        </p>
-                        <hr>
-                        <div class="hidden">
-                            <div class="gallery">
-                                <img src="images/hotels/henderson_footer/imgOne.jpg" alt="">
-                                <img src="images/hotels/henderson_footer/imgTwo.jpg" alt="">
-                                <img src="images/hotels/henderson_footer/imgThree.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="figuresFooter">
-                            <button><a
-                                    href="https://www.booking.com/hotel/us/henderson-beach-resort.html?aid=346685;label=msn-A44mI9_EJsxpRct5OvLsMg-79989508864498%3Atikwd-17273517559%3Aloc-190%3Aneo%3Amte%3Adec%3Aqsdestin%20florida;sid=37b49151aefe38e27ebb4a37907b28c8;dest_id=20022075;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=15;hpos=15;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1570888979;srpvid=221f62c96f1400eb;type=total;ucfs=1&#hotelTmpl">
-                                    Reserve</a>
-                            </button>
-                        </div>
-                    </figcaption>
-                </figure>
-                <!-- Figure Three -->
-                <figure>
-                    <img src="images/hotels/home2.jpg" alt="">
-                    <figcaption>
-                        <h2>Home2 Suites By Hilton Destin</h2>
-                        <a
-                            href="https://www.google.com/maps/place/14060+Emerald+Coast+Pkwy,+Destin,+FL+32541/@30.3866024,-86.459061,17z/data=!3m1!4b1!4m5!3m4!1s0x889144803596b145:0x7deafa94a03ecbaf!8m2!3d30.3866024!4d-86.4568777">
-                            14060 Emerald Coast Parkway , Destin, FL 32541
-                        </a>
-                        <p>9.1 (506 reviews)</p>
-                        <p>Home2 is set in Destin, 1.5 miles from Crystal Sands Beach and 1.5
-                            miles from Emerald Coast Centre.
-                        </p>
-                        <hr>
-                        <div class="hidden">
-                            <div class="gallery">
-                                <img src="images/hotels/home2_footer/imgOne.jpg" alt="">
-                                <img src="images/hotels/home2_footer/imgTwo.jpg" alt="">
-                                <img src="images/hotels/home2_footer/imgThree.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="figuresFooter">
-                            <button><a
-                                    href="https://www.booking.com/hotel/us/home2-suites-by-hilton-destin.html?aid=346685;label=msn-A44mI9_EJsxpRct5OvLsMg-79989508864498%3Atikwd-17273517559%3Aloc-190%3Aneo%3Amte%3Adec%3Aqsdestin%20florida;sid=37b49151aefe38e27ebb4a37907b28c8;dest_id=20022075;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=6;hpos=6;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1570931154;srpvid=90bd0c69d8ab01cc;type=total;ucfs=1&#map_closed">
-                                    Reserve</a></button>
-                        </div>
-                    </figcaption>
-                </figure>
-                <!-- Figure Four -->
-                <figure>
-                    <img src="images/hotels/beachResort512.jpg" alt="">
-                    <figcaption>
-                        <h2>Beach Resort 512</h2>
-                        <a
-                            href="https://www.google.com/maps/place/Beach+Resort+512/@30.3799495,-86.3979021,17z/data=!3m1!4b1!4m8!3m7!1s0x88915b66d6e01341:0xfacc8aa5f9de67e8!5m2!4m1!1i2!8m2!3d30.3799495!4d-86.3957134">
-                            Beach Resort 512, Sandy Cay Drive, Destin, FL</a>
-                        <p>10 (7 reviews)</p>
-                        <p>Located within 350 feet of Miramar Beach and 650 feet of James Lee Park Public
-                            Beach.
-                        </p>
-                        <hr>
-                        <div class="hidden">
-                            <div class="gallery">
-                                <img src="images/hotels/512_footer/imgOne.jpg" alt="">
-                                <img src="images/hotels/512_footer/imgTwo.jpg" alt="">
-                                <img src="images/hotels/512_footer/imgThree.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="figuresFooter">
-                            <button><a
-                                    href="https://www.booking.com/hotel/us/beach-resort-512.html?aid=346685;label=msn-A44mI9_EJsxpRct5OvLsMg-79989508864498%3Atikwd-17273517559%3Aloc-190%3Aneo%3Amte%3Adec%3Aqsdestin%20florida;sid=f39b6740a69686d7bc2aefc7f404329e;dest_id=20022075;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=59;hpos=9;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1571022125;srpvid=b4af1556d7ca01d8;type=total;ucfs=1&#hotelTmpl"
-                                    target="_blank">
-                                    Reserve</a></button>
-                        </div>
-                    </figcaption>
-                </figure>
-                <!-- Figure Five -->
-                <figure>
-                    <img src="images/hotels/thePalms.jpg" alt="">
-                    <figcaption>
-                        <h2>The Palms Of Destin</h2>
-                        <a href="https://www.booking.com/hotel/us/the-palms-of-destin-by-wyndham-vacation-rentals.html?aid=311088;label=the-palms-of-destin-by-wyndham-vacation-rentals-qy9I7b76F2473EIagjiiPwS338499398766%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t2%3Aneg%3Afi%3Atikwd-11552734731%3Alp9026928%3Ali%3Adec%3Adm;sid=f39b6740a69686d7bc2aefc7f404329e;dest_id=20022075;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1571022276;srpvid=1d2815a2e64f007f;type=total;ucfs=1&#map_opened-hotel_address"
-                            target="_blank">
-                            4201 Indian Bayou Trail, Destin, FL 32541</a>
-                        <p>7.7 (14 reviews)</p>
-                        <p>The Palms of Destin by Wyndham Vacation Rentals features a 1,021-square-metre zero-entry
-                            pool.
-                        </p>
-                        <hr>
-                        <div class="hidden">
-                            <div class="gallery">
-                                <img src="images/hotels/palms_footer/imgOne.jpg" alt="">
-                                <img src="images/hotels/palms_footer/imgTwo.jpg" alt="">
-                                <img src="images/hotels/palms_footer/imgThree.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="figuresFooter">
-                            <button><a
-                                    href="https://www.booking.com/hotel/us/the-palms-of-destin-by-wyndham-vacation-rentals.en-gb.html?aid=311088;label=the-palms-of-destin-by-wyndham-vacation-rentals-qy9I7b76F2473EIagjiiPwS338499398766%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t2%3Aneg%3Afi%3Atikwd-11552734731%3Alp9026928%3Ali%3Adec%3Adm;sid=658e4aeb6f2f44ac5e615b6be9e685d5;dest_id=20022075;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1571079341;srpvid=5af385162f58021a;type=total;ucfs=1&#hotelTmpl"
-                                    target="_blank">
-                                    Reserve</a></button>
-                        </div>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <!-- Attractions -->
-        <section id="attractions">
-            <!-- Section Title -->
-            <div class="sectionTitle">
-                <h1>Attractions</h1>
-                <p>Destin filled with places to have fun. From a very popular small to even a small village.</p>
-            </div>
-            <div class="figures">
-                <!-- Figure One -->
-                <figure>
-                    <img src="images/attractions/destinCommons.jpg" alt="">
-                    <figcaption>
-                        <h2>Destin Commons</h2>
-                        <a
-                            href="https://www.google.com/maps?q=4100+Legendary+Dr,+FL+32541-8601&um=1&ie=UTF-8&sa=X&ved=0ahUKEwim2aPyhZ3lAhUNbawKHUQnBB8Q_AUIEigB">
-                            4100 Legendary Dr, FL 32541-8601</a>
-                        <p>Destin Commons
-                            boasts 95+ stores and restaurants, including Florida’s first Paula Deen’s Family Kitchen and
-                            Southern Living Store
-                        </p>
-                        <hr>
-                        <div class="hidden">
-                            <div class="gallery">
-                                <img src="images/attractions/common_footer/imgOne.jpg" alt="">
-                                <img src="images/attractions/common_footer/imgTwo.jpg" alt="">
-                                <img src="images/attractions/common_footer/imgThree.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="figuresFooter">
-                            <button><a
-                                    href="https://www.tripadvisor.com/Attraction_Review-g34182-d2147971-Reviews-Destin_Commons-Destin_Florida.html"><img
-                                        src="images/tripAdsisorLogo.png" alt=""></a>
-                            </button>
-                        </div>
-                    </figcaption>
-                </figure>
-                <!-- Figure Two -->
-                <figure>
-                    <img src="images/attractions/harborWalkVillage.jpg" alt="">
-                    <figcaption>
-                        <h2>HarborWalk Village</h2>
-                        <a
-                            href="https://www.google.com/maps/place/HarborWalk+Village/@30.3946701,-86.5143701,17z/data=!3m1!4b1!4m8!3m7!1s0x889143febe400da9:0x24527c057916d6d7!5m2!4m1!1i2!8m2!3d30.3946655!4d-86.5121814">
-                            10 Harbor Blvd, FL 32541-7374
-                        </a>
-                        <p>A spirited and vibrant venue on Destin Harbor, restaurants, shopping, festivals, zip lines,
-                            magic shows, live music- all overlooking incredible views!</p>
-                        <hr>
-                        <div class="hidden">
-                            <div class="gallery">
-                                <img src="images/attractions/walkVillage_footer/imgOne.jpg" alt="">
-                                <img src="images/attractions/walkVillage_footer/imgTwo.jpg" alt="">
-                                <img src="images/attractions/walkVillage_footer/imgThree.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="figuresFooter">
-                            <button><a
-                                    href="https://www.tripadvisor.com/Attraction_Review-g34182-d8519045-Reviews-HarborWalk_Village-Destin_Florida.html#REVIEWS"><img
-                                        src="images/tripAdsisorLogo.png" alt=""></a>
-                            </button>
-                        </div>
-                    </figcaption>
-                </figure>
-                <!-- Figure Three -->
-                <figure>
-                    <img src="images/attractions/baytowne.jpg" alt="">
-                    <figcaption>
-                        <h2>Village of Baytowne Wharf</h2>
-                        <a
-                            href="https://www.google.com/maps/place/The+Village+of+Baytowne+Wharf/@30.390319,-86.3271077,17z/data=!4m16!1m7!3m6!1s0x88915eb17f3f5a21:0x826654cbd78276bf!2s9100+Baytowne+Wharf+Blvd,+Miramar+Beach,+FL+32550!3b1!8m2!3d30.390319!4d-86.324919!3m7!1s0x88915eb18007f403:0x376d4194f3fddfb3!5m2!4m1!1i2!8m2!3d30.390788!4d-86.3240862">
-                            9100 Baytowne Wharf Blvd, FL 32550-1815
-                        </a>
-                        <p>The Village of Baytowne Wharf features an array of boutiques, eateries, galleries and
-                            nightlife.</p>
-                        <hr>
-                        <div class="hidden">
-                            <div class="gallery">
-                                <img src="images/attractions/baytowne_footer/imgOne.jpg">
-                                <img src="images/attractions/baytowne_footer/imgTwo.jpg" alt="">
-                                <img src="images/attractions/baytowne_footer/imgThree.png" alt="">
-                            </div>
-                        </div>
-                        <div class="figuresFooter">
-                            <button><a
-                                    href="https://www.tripadvisor.com/Attraction_Review-g34182-d292434-Reviews-Village_of_Baytowne_Wharf-Destin_Florida.html"><img
-                                        src="images/tripAdsisorLogo.png" alt="">
-                                </a>
-                            </button>
-                        </div>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <!-- Dinning -->
-        <section id="dining">
-            <!-- Section Title -->
-            <div class="sectionTitle">
-                <h1>Dining</h1>
-                <p>The food in Destin is really diverse. It does not only hold seafood restaurant but even Italian
-                    amazing dishes.</p>
-            </div>
-            <div class="figures">
-                <!-- Figure One -->
-                <figure>
-                    <img src="images/dinning/clemenza.jpg" alt="">
-                    <figcaption>
-                        <h2>Mama Clemenza's</h2>
-                        <p>
-                            From our Italian Breakfast Panini, with prosciutto, eggs and Gruyere, to Lemon Curd Ricotta
-                            Pancakes, everything we serve is cooked with homemade attention.
-                        </p>
-                        <hr>
-                        <div class="figuresFooter">
-                            <button><a href="http://mamaclemenzaseuropeanbreakfast.com/" target="_blank">
-                                    Website
-                                </a></button>
-                        </div>
-                    </figcaption>
-                </figure>
-                <!-- Figure Two -->
-                <figure>
-                    <img src="images/dinning/mimmos.jpg" alt="">
-                    <figcaption>
-                        <h2>Mimmo's Ristorante Italiano</h2>
-                        <p>
-                            Mimmo's is the hottest restaurant in Destin, Florida serving authentic Italian dishes
-                            bursting with flavor and color. Open seven days a week, 11 am to 10 pm on weekdays and 5 pm
-                            to 10 pm on weekends
-                        </p>
-                        <hr>
-                        <div class="figuresFooter">
-                            <button><a href="http://eatmimmos.com/?utm_source=tripadvisor&utm_medium=referral"
-                                    target="_blank">
-                                    Website</a>
-                            </button>
-                        </div>
-                    </figcaption>
-                </figure>
-                <!-- Figure Three -->
-                <figure>
-                    <img src="images/dinning/jack.png" alt="">
-                    <figcaption>
-                        <h2>Jackacuda's Seafood & Sushi</h2>
-                        <p>
-                            Jackacudas Seafood + Sushi was created to bring excitement through food combined with a
-                            relaxing atmosphere bringing together locals, friends, family and tourists.
-                        </p>
-                        <hr>
-                        <div class="figuresFooter">
-                            <button><a href="https://www.jackacudas.com/" target="_blank">
-                                    Website</a></button>
-                        </div>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <!-- Review -->
-        <section id="review">
-            <!-- Section Title -->
-            <div class="sectionTitle">
-                <h1>Reviews</h1>
-                <p>Many people have gone to Destin. Here as some reviews that other people have left.</p>
-            </div>
-            <!-- Figures -->
-            <div class="figures">
-                <!-- Figure One -->
-                <figure>
-                    <div class="content">
-                        <div class="left">
-                            <img src="images/reviews/jessica.jpg" alt="">
-                            <h3>Jessica C.</h3>
-                        </div>
-                        <div class="right">
-                            <p>
-                                "Had an amazing experience today with Dave and Caleb! They were very entertaining and
-                                made sure our kids were comfortable and prepared before they started."
-                            </p>
+                        <div class="col">
+                            <h5> <a href="technology.html">Amazon</a></h5>
                         </div>
                     </div>
-                </figure>
-                <!-- Figure Two -->
-                <figure>
-                    <div class="content">
-                        <div class="left">
-                            <img src="images/reviews/angieB.jpg" alt="">
-                            <h3>Angie B.</h3>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Entertainment</h3>
                         </div>
-                        <div class="right">
-                            <p>
-                                "This place was awesome, you are out for about an hour enjoying a boat ride along with
-                                parasailing. Make sure to take some cash to tip your Captain, they deserve it!"
-                            </p>
+                        <div class="col-12">
+                            <h5><a href="entertainment.html">Amy Schume</a></h5>
+                        </div>
+                        <div class="col-12">
+                            <h5><a href="entertainment.html">Kanye West</a></h5>
                         </div>
                     </div>
-                </figure>
-                <!-- Figure Three -->
-                <figure>
-                    <div class="content">
-                        <div class="left">
-                            <img src="images/reviews/justin.jpg" alt="">
-                            <h3>Justin Z.</h3>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Sports</h3>
                         </div>
-                        <div class="right">
-                            <p>
-                                "Great experience. Very organized and friendly. Efficient as well which is a plus.
-                                Highly
-                                recommend."
-                            </p>
+                        <div class="col-12">
+                            <h5> <a href="basketball.html"> Basketball</a></h5>
+                        </div>
+                        <div class="col-12">
+                            <h5> <a href="hockey.html"> Hockey</a></h5>
                         </div>
                     </div>
-                </figure>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3>Local</h3>
+                        </div>
+                        <div class="col-12">
+                            <h5> <a href="local.html">Animals</a></h5>
+                        </div>
+                        <div class="col-12">
+                            <h5> <a href="local.html"></a> Train</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <i class="fab fa-instagram fa-3x social"></i>
+                    <i class="fab fa-twitter fa-3x social"></i>
+                    <i class="fab fa-facebook-f fa-3x social"></i>
+                </div>
+                <div class="last">
+                    <hr>
+                    <div class="row">
+                        <div class="col-6">
+                            <h6> Copyright &copy; 2019 NewsFake. All Rights Reserved.</h6>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-info source">Sources</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-
-        <!-- Contact Us -->
-        <section id="contactUs">
-            <!-- Section Title -->
-            <div class="sectionTitle">
-                <h1>Contact Us</h1>
-                <p>Want to contact us about a problem or review? Just type it in below.</p>
+            <div id="display-sources" class="d-none">
+                <button id="close-source" type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h6>Close</h6>
+                <div class="align-center">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <a href="https://cnn.com" target="_blank"><img src="images/sources/cnn.jpg" alt=""></a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a href="https://giphy.com" target="_blank"><img src="images/sources/giphy.gif" alt=""></a>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <a href="https://unsplash.com" target="_blank"><img src="images/sources/unsplash.jpg"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Form -->
-            <form>
-                <label>Name:</label>
-                <input type="text">
-                <label>Email:</label>
-                <input type="email">
-                <label>Message:</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button>Submit</button>
-            </form>
-        </section>
+        </footer>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <h4> Copyright &copy; 2019 Resort. All Rights Reservered. </h4>
-    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
