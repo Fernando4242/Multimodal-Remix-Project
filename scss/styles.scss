@@ -1,1 +1,11 @@
-@import "default";
+@import "reset";
+
+@import "small_default";
+
+@media screen and (min-width: 768px){
+    @import "medium";
+}
+
+@media screen and (min-width: 1024px){
+    @import "large";
+}
