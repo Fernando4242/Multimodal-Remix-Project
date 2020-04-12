@@ -1,4 +1,3 @@
-
 //Animation on Cards
 var dark = false
 
@@ -40,75 +39,56 @@ $("#two-art").on("click", articletwo)
 $(document).ready(() => {
     //WRITE MY NAME IN EACH ARTICLE and MY LIST OF AUTOMATED STUFF HUEHUE CAUSE ITS COOL
     $(".author").text(`By Fernando Portillo, NewsFake`)
-    $(".img-author img").attr(`src`,`images/dont_worry_about_this_folder/me.jpg`)
+    $(".img-author img").attr(`src`, `images/dont_worry_about_this_folder/me.jpg`)
     $(".source").text("Credits")
 
     function getWeatherJSON() {
-        const url = "http://api.openweathermap.org/data/2.5/weather?id=4684888&units=imperial&appid=a04b387edaf9a8431334ad8a28467935"
-        $.getJSON(url).done((res) => {
-            var iconID = res.weather[0].icon
-            var temperature = Math.round(res.main.temp)
-            var cloudy = res.clouds.all
-            var windSpeed = Math.round(res.wind.speed)
-            var humidity = res.main.humidity
 
-            setInterval(() => {
-                //GET THE TIME AND DATE
-                var today = new Date()
-                var h = today.getHours()
-                var m = today.getMinutes()
-                var s = today.getSeconds()
-                dd = "AM"
-
-                //CONVERT TO 12 HOUR
-                if (h >= 12) {
-                    h = h - 12
-                    dd = "PM"
-                } else if (h == 0) {
-                    h = 12
-                }
-
-                //ADDS ZERO WHEN ITS SINGLE DIGIT
-                h = checkTime(h);
-                m = checkTime(m);
-                s = checkTime(s);
-
-                //DISPLAYS HOUR
-                $(".hour").text(`${h} : ${m} : ${s} ${dd}`)
-            })
-
+        setInterval(() => {
+            //GET THE TIME AND DATE
             var today = new Date()
-            var date = new Date().toDateString()
             var h = today.getHours()
+            var m = today.getMinutes()
+            var s = today.getSeconds()
+            dd = "AM"
 
-            $(".time").text(date)
-            $("#description").text(`${res.weather[0].description}`)
-            $(".location").text(`${res.name}, Texas ${res.sys.country}`)
-            $("#icon").attr(`src`, `http://openweathermap.org/img/wn/${iconID}@2x.png`)
-            $(".display").text(`${temperature}`)
-            $("#cloudy").text(`Cloudiness: ${cloudy}%`)
-            $("#humidity").text(`Humidity: ${humidity}%`)
-            $("#wind").text(`Wind: ${windSpeed} mph`)
-
-
-            if (6 <= h && h <= 10) {
-                //Morning
-                console.log("Morning")
-                $(".jumbotron").css("background-image", "url(" + "images/jumbo/morning.jpg" + ")")
-            } else if (11 <= h && h <= 17) {
-                //day
-                console.log("Day")
-                $(".jumbotron").css("background-image", "url(" + "images/jumbo/day.jpg" + ")")
-            } else if (h >= 17) {
-                //night
-                $(".jumbotron").css("background-image", "url(" + "images/jumbo/night.jpg" + ")")
-                console.log("Night")
+            //CONVERT TO 12 HOUR
+            if (h >= 12) {
+                h = h - 12
+                dd = "PM"
+            } else if (h == 0) {
+                h = 12
             }
 
-            console.log(res.dt)
+            //ADDS ZERO WHEN ITS SINGLE DIGIT
+            h = checkTime(h);
+            m = checkTime(m);
+            s = checkTime(s);
 
-        })
-    }
+            //DISPLAYS HOUR
+            $(".hour").text(`${h} : ${m} : ${s} ${dd}`)
+
+        var today = new Date()
+        var date = new Date().toDateString()
+        var h = today.getHours()
+
+        $(".time").text(date)
+
+        if (6 <= h && h <= 10) {
+            //Morning
+            console.log("Morning")
+            $(".jumbotron").css("background-image", "url(" + "images/jumbo/morning.jpg" + ")")
+        } else if (11 <= h && h <= 17) {
+            //day
+            console.log("Day")
+            $(".jumbotron").css("background-image", "url(" + "images/jumbo/day.jpg" + ")")
+        } else if (h >= 17) {
+            //night
+            $(".jumbotron").css("background-image", "url(" + "images/jumbo/night.jpg" + ")")
+            console.log("Night")
+        }
+    })
+}
 
     function checkTime(i) {
         if (i < 10) {
@@ -120,7 +100,7 @@ $(document).ready(() => {
     function getImageAd() {
         const width = 900
         const height = 250
-        const collectionID = 1999207
+        const collectionID = 790642
 
         const url = `https://source.unsplash.com/collection/${collectionID}/${width}x${height}`
         fetch(url).then((res) => {
@@ -144,7 +124,6 @@ $(document).ready(() => {
     //LAST MODIFIED 
     var modified = document.lastModified
     $(".last-modified").text(`Last updated ${modified}`)
-
 
     //DarkMode
     function DarkMode() {
