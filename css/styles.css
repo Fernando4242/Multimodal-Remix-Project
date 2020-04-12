@@ -262,7 +262,7 @@ footer .location address {
 }
 
 .article-img {
-  width: 100%;
+  width: 75%;
 }
 
 #local hr {
@@ -299,6 +299,10 @@ footer .location address {
 
 .last source {
   cursor: pointer;
+}
+
+.tetx {
+  display: inline;
 }
 
 .fixed-bottom {
