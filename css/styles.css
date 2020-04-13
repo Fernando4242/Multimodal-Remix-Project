@@ -1,6 +1,7 @@
 * {
   font-family: 'Playfair Display', sans-serif;
   overflow: clip;
+  letter-spacing: 1px;
 }
 
 .container-fluid {
@@ -128,7 +129,7 @@ a {
 
 .card-title,
 .article-title {
-  font-family: 'Concert One', cursive;
+  font-weight: bolder;
 }
 
 .card-title:hover {
@@ -244,20 +245,26 @@ footer .location address {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.article-title {
+  color: orange;
+}
+
 #technology .card-title {
-  letter-spacing: .2px;
+  letter-spacing: 2px;
   margin: 0 auto 16px;
 }
 
 .article-sub {
   padding-top: 20px;
-  font-weight: bold;
+  font-weight: bolder;
+  color: orange;
 }
 
 .article-text {
+  color: black;
   text-indent: 50px;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 17px;
+  font-weight: 550;
   line-height: 1.66666667;
 }
 
@@ -399,6 +406,10 @@ body {
 
 .dark-mode .close {
   color: white;
+}
+
+.dark-mode .article-text {
+  color: whitesmoke;
 }
 
 .author-info {

@@ -170,10 +170,10 @@ var Source = $(".video-gif").attr("src")
 var newSrc = Source.slice(0, 42)
 console.log(htmlWidth)
 
-if (htmlWidth > 900) {
+if (htmlWidth > 1000) {
     Source = $(".video-gif").attr("src", Source + "autoplay=1")
 }
 
-if (htmlWidth <= 900) {
+if (htmlWidth <= 1000) {
     Source = $(".video-gif").attr("src", newSrc)
 }
