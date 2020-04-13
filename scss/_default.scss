@@ -21,22 +21,17 @@
     margin: 0%;
 }
 
-.headerAdHolder {
+.imageHolder {
     background: #1b1f22;
+    width: 100%;
+    height: 200px;
     display: flex;
+    align-self: center;
     justify-content: center;
-    align-items: center;
+}
 
-    .imageHolder {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        width: 800px;
-        height: 200px;
-
-        img {
-            width: 100%;
-        }
-    }
+.s{
+    font-weight: bolder;
 }
 
 a {
@@ -118,7 +113,7 @@ a {
 .card-title,
 .article-title {
     // font-family: 'Concert One', cursive;
-    font-weight:bolder;
+    font-weight: bolder;
 }
 
 .card-title:hover {
@@ -237,8 +232,8 @@ footer {
 
 //ARTICLES CSS
 
-.article-title{
-    color:orange;
+.article-title {
+    color: orange;
 }
 
 #technology .card-title {
@@ -249,7 +244,7 @@ footer {
 .article-sub {
     padding-top: 20px;
     font-weight: bolder;
-    color:orange;
+    color: orange;
 }
 
 .article-text {
@@ -308,7 +303,7 @@ footer {
     }
 }
 
-.text{
+.text {
     display: inline;
 }
 
@@ -400,8 +395,8 @@ body {
         color: white;
     }
 
-    .article-text{
-        color:whitesmoke;
+    .article-text {
+        color: whitesmoke;
     }
 }
 
