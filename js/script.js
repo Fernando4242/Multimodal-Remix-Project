@@ -99,7 +99,7 @@ $(document).ready(() => {
 
     function getImageAd() {
         const width = 900
-        const height = 250
+        const height = 200
         const collectionID = 790642
 
         const url = `https://source.unsplash.com/collection/${collectionID}/${width}x${height}`
