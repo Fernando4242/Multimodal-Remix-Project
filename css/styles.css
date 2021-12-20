@@ -1,13 +1,11 @@
 * {
   font-family: 'Playfair Display', sans-serif;
-  overflow:scroll;
   letter-spacing: 1px;
 }
 
 .container-fluid {
   padding: 0;
   margin: 0%;
-  scroll:none;
 }
 
 .container-fluid #weather-stuff {
