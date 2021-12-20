@@ -76,16 +76,13 @@ $(document).ready(() => {
 
         if (6 <= h && h <= 10) {
             //Morning
-            console.log("Morning")
             $(".jumbotron").css("background-image", "url(" + "images/jumbo/morning.jpg" + ")")
         } else if (11 <= h && h <= 17) {
             //day
-            console.log("Day")
             $(".jumbotron").css("background-image", "url(" + "images/jumbo/day.jpg" + ")")
         } else if (h >= 17) {
             //night
             $(".jumbotron").css("background-image", "url(" + "images/jumbo/night.jpg" + ")")
-            console.log("Night")
         }
     })
 }
